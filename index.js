@@ -1,18 +1,18 @@
 var readlineSync = require("readline-sync");
 var chalk = require("chalk");
 
-console.log("Do you know me better? Try the following quiz");
+console.log(chalk.yellow("Do you know India better? Try the following quiz"));
 console.log("*6 questions\n*you get +2 points for correct answer");
-console.log("-1 point if you get it incorrect");
+console.log(chalk.bold.green("-1 point if you get it incorrect"));
 console.log("Lets BEGIN!!! ")
 var userName = readlineSync.question(chalk.bgBlueBright("What is your name?\n"));
 
-console.log(chalk.bgRed("Welcome",userName, "to the quiz on Me"))
+console.log(chalk.bgRed("Welcome",userName, "to the quiz on INDIA"))
 console.log("*****************************************************")
 var score = 0
 var Leaderboard = [{name : "Nithin",Score :10},
-                  {name : "Deepika",Score : 8},
-                  {name : "Sheetal",Score : 7}]
+                  {name : "Akanksha",Score : 8},
+                  {name : "Raghavan",Score : 7}]
 
 function play(question,answer,explanation){
   var userAnswer = readlineSync.question(question+"\n");
@@ -28,37 +28,37 @@ function play(question,answer,explanation){
 }
 
 var QuestionOne = {
-  question : "Where I reside?\n a.Chennai \n b.Bengaluru \n c.Hassan \n d.Kolkata \n enter [a..d]",
+  question : "Which Indian city is the capital of two states?\n a.Chennai \n b.Mumbai \n c.Chandigarh \n d.Kolkata \n enter [a..d]",
   answer : "c",
-  explanation : "explanation : Iam a resident of Hassan, Karnataka"
+  explanation : "explanation : Chandigarh is the capital of states Punjab and Haryana"
 }
 var QuestionTwo = {
-  question :"When is my birthday?\n a.18th May \n b.14th May \n c.16th May \n d.20th May \n enter [a..d]",
+  question :"With how many countries India shares its border?\n a.6 \n b.7 \n c.9 \n d.10 \n enter [a..d]",
   answer : "b",
-  explanation : "explanation : My birthday is on 14th May!"
+  explanation : "explanation : India shares borders with China, Pakistan, Bhutan, Myanmar, Afghanistan, Nepal and Bangladesh."
 }
 var QuestionThree = {
-  question :"Which is my favourite movie?\n a.The pursuit of Happyness \n b.Lord of the rings \n c.Harry Potter \n d.Chak de India \n enter [a..d]",
-  answer : "a",
-  explanation : "The pursuit of Happyness is my all-time-favourite movie."
+  question :"Which of these is not a river of India?\n a.Ganga \n b.Mekong \n c.Yamuna \n d.Chenab \n enter [a..d]",
+  answer : "b",
+  explanation : "explanation : The Mekong which is the world's twelfth longest river and the seventh longest in Asia begins on the Tibetan Plateau and runs through China, Myanmar, Thailand, Laos, Cambodia, and Vietnam before emptying into the South China Sea."
 }
 
 var QuestionFour = {
-  question :"Which Sport have I represented at National level?\n a.Kabbaddi \n b.Volley ball \n c.Handball \n d.Cricket \n enter [a..d]",
-  answer : "c",
-  explanation : "Iam a Handball player.Handball is a team sport of 7 players. My position is called 'Left Wing' "
+  question :"Which Indian city hosted first Kabaddi World Cup?\n a.Mumbai \n b.Chennai \n c.Benagluru \n d.Kolkata \n enter [a..d]",
+  answer : "a",
+  explanation : "explanation : 1st World Cup of Kabaddi was organised in 2004 at Mumbai (India), India won the First World Cup by beating Iran in the finals."
 }
 
 var QuestionFive = {
-  question :"What is my dream ?\n a.Go to space \n b.Sky diving \n c.Flying a jet \n d.all of them \n enter [a..d]",
+  question :"Which Indian president nicknamed as 'Missile Man' ?\n a.Kocheril Raman Narayanan \n b.Sarvepalli RadhaKrishnan \n c.Ram Nath Kovind \n d.A.P.J Abdul Kalam \n enter [a..d]",
   answer : "d",
-  explanation : "My dream is to fulfill all of them"
+  explanation : "explanation : India's Missile Man APJ Abdul Kalam. Kalam was the 11th president of India and known as the 'People's President' who was loved by most citizens"
 }
 
 var QuestionSix = {
-  question :" Where do I like to work?\n a.India \n b.UK \n c.US \n d.all of them \n enter [a..d]",
-  answer : "a",
-  explanation : "I love to work in India and develop career here"
+  question :"Who won gold Olympics medal in Tokyo Olympics 2020 ?\n a.Ravi Kumar Dahiya \n b.Neeraj Chopra \n c.Mirabai Chanu \n d.Bajrang Punia \n enter [a..d]",
+  answer : "b",
+  explanation : "explanation : 1st gold Medal in Olympic for India 2021 won by Neeraj Chopra in Men’s Javelin Throw at record 87.58 m in First Attempt. "
 }
 
 
@@ -86,5 +86,4 @@ console.log(chalk.bgRed("Leaderboard"))
 for(var k = 0;k <  Leaderboard.length; k++){
   console.log(Leaderboard[k].name," : ",Leaderboard[k].Score,"\n")
 }
-
-console.log("Thanks for playing")
+console.log(chalk.underline.bgBlue("Thanks for playing!Feedbacks and suggestions are always welcome!Kindly share screenshots of your scores to @Meghana14sk on twitter"))
