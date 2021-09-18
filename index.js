@@ -2,7 +2,7 @@ var readlineSync = require("readline-sync");
 var chalk = require("chalk");
 
 console.log(chalk.yellow("Do you know India better? Try the following quiz"));
-console.log("*5 questions\n*you get +2 points for correct answer");
+console.log("*6 questions\n*you get +2 points for correct answer");
 console.log(chalk.bold.green("-1 point if you get it incorrect"));
 console.log("Lets BEGIN!!! ")
 var userName = readlineSync.question(chalk.bgBlueBright("What is your name?\n"));
@@ -55,8 +55,14 @@ var QuestionFive = {
   explanation : "explanation : India's Missile Man APJ Abdul Kalam. Kalam was the 11th president of India and known as the 'People's President' who was loved by most citizens"
 }
 
+var QuestionSix = {
+  question :"Who won gold Olympics medal in Tokyo Olympics 2020 ?\n a.Ravi Kumar Dahiya \n b.Neeraj Chopra \n c.Mirabai Chanu \n d.Bajrang Punia \n enter [a..d]",
+  answer : "b",
+  explanation : "explanation : 1st gold Medal in Olympic for India 2021 won by Neeraj Chopra in Men’s Javelin Throw at record 87.58 m in First Attempt. "
+}
 
-var questionnaire = [QuestionOne,QuestionTwo,QuestionThree,QuestionFour,QuestionFive]
+
+var questionnaire = [QuestionOne,QuestionTwo,QuestionThree,QuestionFour,QuestionFive, QuestionSix]
 
 for(var i = 0;i < questionnaire.length;i++){
   play(questionnaire[i].question,questionnaire[i].answer,questionnaire[i].explanation);
